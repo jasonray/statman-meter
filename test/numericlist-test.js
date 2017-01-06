@@ -151,6 +151,11 @@ describe('numeric list', function () {
             list.push(1);
             list.max().should.be.equal(1);
         });
+        it('given an single negative entry list, max should return that number', function () {
+            var list = new NumericList();
+            list.push(-1);
+            list.max().should.be.equal(-1);
+        });
     });
 
 
