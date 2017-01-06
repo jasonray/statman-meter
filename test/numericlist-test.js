@@ -71,7 +71,7 @@ describe('numeric list', function () {
         var list = new NumericList();
         list.push(2.2);
         list.push(4.4);
-        list.sum().should.equal(6.6);
+        list.sum().should.closeToEqual(6.6);
     });
 
     it('given a list of five decimal numbers, sum should return the sum of the numbers', function () {
@@ -163,7 +163,7 @@ describe('numeric list', function () {
     should.Assertion.add('closeToEqual',
         function (expected) {
             this.params = {operator: 'to be close to equal'};
-            var actual = obj;
+            var actual = this.obj;
             actual.toFixed(2).should.equal(expected.toFixed(2));
         });
 
