@@ -1,0 +1,23 @@
+{
+  "name": "statman-meter",
+  "version": "0.0.1",
+  "description": "statman-meter is one of the metrics from the statman library. Loosely based upon codehale metric package, a meter provides count and average information over a period of time",
+  "main": "lib/Meter.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasonray/statman-meter.git"
+  },
+  "keywords": [
+    "metrics",
+    "statman"
+  ],
+  "author": "jasonray",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jasonray/statman-meter/issues"
+  },
+  "homepage": "https://github.com/jasonray/statman-meter#readme"
+}
