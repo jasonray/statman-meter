@@ -14,7 +14,7 @@ describe('numeric list', function () {
 
     it('given an empty list, size should return 0', function () {
         var list = new NumericList();
-        assert.equal(list.size(), 0);
+        list.size().should.equal(0);
     });
 
     it('given a list of one, size should return 1', function () {
