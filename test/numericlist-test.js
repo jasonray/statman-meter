@@ -1,7 +1,7 @@
 /*jslint node: true */
 "use strict";
 
-var NumericList = require('../lib/NumericList');
+var NumericList = require('../lib/numeric-list');
 var mocha = require('mocha');
 var assert = require('assert');
 var should = require('should');
