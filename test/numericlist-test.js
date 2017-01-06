@@ -132,7 +132,7 @@ describe('numeric list', function () {
         list.push(3.3);
         list.push(4.4);
         list.push(5.5);
-        assertCloseEnough(list.average(), 3.3)
+        list.average().should.be.closeToEqual(3.3);
     });
 
     it('pushing a list of 100,000 numbers and calculating sum/ave should run within milliseconds', function () {
