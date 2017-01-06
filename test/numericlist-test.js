@@ -174,7 +174,7 @@ describe('numeric list', function () {
         });
     });
 
-    describe('average', function () {
+    describe('max', function () {
         it('given an empty list, max should return 0', function () {
             var list = new NumericList();
             list.max().should.be.equal(0);
