@@ -144,7 +144,12 @@ describe('numeric list', function () {
     describe('average', function () {
         it('given an empty list, max should return 0', function () {
             var list = new NumericList();
-            list.max().should.be.closeToEqual(0);
+            list.max().should.be.equal(0);
+        });
+        it('given an single positive entry list, max should return that number', function () {
+            var list = new NumericList();
+            list.push(1);
+            list.max().should.be.equal(1);
         });
     });
 
