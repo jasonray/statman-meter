@@ -312,8 +312,4 @@ describe('numeric list', function () {
             actual.toFixed(2).should.equal(expected.toFixed(2));
         });
 
-    function assertCloseEnough(actual, expected) {
-        assert.equal(actual.toFixed(2), expected.toFixed(2));
-    }
-
 });
