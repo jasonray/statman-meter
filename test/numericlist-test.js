@@ -302,6 +302,8 @@ describe('numeric list', function () {
         list.size().should.be.closeToEqual(expected.size);
         list.sum().should.be.closeToEqual(expected.sum);
         list.average().should.be.closeToEqual(expected.average);
+        list.min().should.be.equal(1);
+        list.max().should.be.equal(100000);
     });
 
     should.Assertion.add('closeToEqual',
