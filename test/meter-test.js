@@ -114,7 +114,7 @@ describe('meter', function () {
         meter = new Meter('calls to subsystem');
         meter.record(2.2);
         meter.record(4.4);
- meter.toString().should.equal('[calls to subsystem: count:2; average:3.30]');
+        meter.toString().should.equal('[calls to subsystem: count:2; average:3.30]');
     });
     it('toString() without name', function () {
         var meter;
