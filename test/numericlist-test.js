@@ -229,17 +229,17 @@ describe('numeric list', function () {
             list.push(1);
             list.min().should.be.equal(1);
         });
-        it.skip('given an single negative entry list, min should return that number', function () {
+        it('given an single negative entry list, min should return that number', function () {
             var list = new NumericList();
             list.push(-1);
             list.min().should.be.equal(-1);
         });
-        it.skip('given an all positive entry list with smallest at end, min should return the min', function () {
+        it('given an all positive entry list with smallest at end, min should return the min', function () {
             var list = new NumericList();
-            list.push(1);
-            list.push(2);
             list.push(3);
-            list.min().should.be.equal(3);
+            list.push(2);
+            list.push(1);
+            list.min().should.be.equal(1);
         });
         it.skip('given an all positive entry list with smallest at beginning, min should return the min', function () {
             var list = new NumericList();
