@@ -20,7 +20,7 @@ describe('numeric list', function () {
     it('given a list of one, size should return 1', function () {
         var list = new NumericList();
         list.push(0);
-        assert.equal(list.size(), 1);
+        list.size().should.equal(1);
     });
 
     it('given a list of five, size should return 5', function () {
