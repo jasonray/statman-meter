@@ -58,7 +58,7 @@ describe('numeric list', function () {
         list.push(3);
         list.push(4);
         list.push(5);
-        assertCloseEnough(list.sum(), 15);
+        list.sum().should.equal(15);
     });
 
     it('given a list of one decimal number, sum should return the number', function () {
