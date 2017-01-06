@@ -37,7 +37,7 @@ describe('meter', function () {
         var meter;
         meter = new Meter();
         meter.record(5);
-        assert.equal(meter.getAverage(), 5);
+        meter.getAverage().should.equal(5);
     });
 
     it('if record contains integer numbers, provide this number in average', function () {
