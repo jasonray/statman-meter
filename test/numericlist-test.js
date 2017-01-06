@@ -4,7 +4,7 @@
 var NumericList = require('../lib/NumericList');
 var mocha = require('mocha');
 var assert = require('assert');
-var should=require('should');
+var should = require('should');
 
 describe('numeric list', function () {
     it('init', function () {
@@ -71,7 +71,7 @@ describe('numeric list', function () {
         var list = new NumericList();
         list.push(2.2);
         list.push(4.4);
-        assertCloseEnough(list.sum(), 6.6)
+        list.sum().should.equal(6.6);
     });
 
     it('given a list of five decimal numbers, sum should return the sum of the numbers', function () {
@@ -159,6 +159,13 @@ describe('numeric list', function () {
         assertCloseEnough(list.sum(), expected.sum, "sum");
         assertCloseEnough(list.average(), expected.average, "ave");
     });
+
+    should.Assertion.add('closeToEqual',
+        function (expected) {
+            this.params = {operator: 'to be close to equal'};
+            var actual = obj;
+            actual.toFixed(2).should.equal(expected.toFixed(2));
+        });
 
     function assertCloseEnough(actual, expected) {
         assert.equal(actual.toFixed(2), expected.toFixed(2));
