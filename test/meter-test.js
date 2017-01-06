@@ -56,7 +56,7 @@ describe('meter', function () {
         meter.getAverage().should.closeToEqual(3.3);
     });
 
-    it.skip('given record using stopwatch, average should still return averages', function (done) {
+    it('given record using stopwatch, average should still return averages', function (done) {
         var meter = new Meter();
         var sw1 = new StopWatch();
         sw1.start();
@@ -73,8 +73,8 @@ describe('meter', function () {
         }, 400);
 
         setTimeout(function () {
-            TestHelper.assertCloseEnough(meter.getCount(), 2);
-            TestHelper.assertCloseEnough(meter.getAverage(), 300);
+            meter.getCount().should.equal(2);
+            meter.getAverage().should.within(300, 320); //allow for some timing to be off, setTimeout not exact science
             done();
         }, 500);
     });
