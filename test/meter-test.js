@@ -89,6 +89,20 @@ describe('meter', function () {
         }, 500);
     });
 
+    it('meter.start() provides and event, which can be used to auto record meter', function (done) {
+        var meter = new Meter();
+
+        var meterEvent = meter.startEvent();
+        setTimeout(function () {
+            meterEvent.stop();
+
+            meter.getCount().should.equal(1);
+            meter.getAverage().should.within(200, 220); //allow for some timing to be off, setTimeout not exact science
+            done();
+        }, 200);
+
+    });
+
     should.Assertion.add('closeToEqual',
         function (expected) {
             var actual = this.obj;
