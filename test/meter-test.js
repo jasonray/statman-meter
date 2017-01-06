@@ -35,60 +35,62 @@ describe('meter', function () {
         });
     });
 
-    it('if record contains a number, provide this number in average', function () {
-        var meter;
-        meter = new Meter();
-        meter.record(5);
-        meter.getAverage().should.equal(5);
-    });
+    describe('average', function () {
+        it('if record contains a number, provide this number in average', function () {
+            var meter;
+            meter = new Meter();
+            meter.record(5);
+            meter.getAverage().should.equal(5);
+        });
 
-    it('if record contains integer numbers, provide this number in average', function () {
-        var meter;
-        meter = new Meter();
-        meter.record(2);
-        meter.record(4);
-        meter.getAverage().should.equal(3);
-    });
+        it('if record contains integer numbers, provide this number in average', function () {
+            var meter;
+            meter = new Meter();
+            meter.record(2);
+            meter.record(4);
+            meter.getAverage().should.equal(3);
+        });
 
-    it('if record contains decimal numbers, provide this number in average', function () {
-        var meter;
-        meter = new Meter();
-        meter.record(2.2);
-        meter.record(4.4);
-        meter.getAverage().should.closeToEqual(3.3);
-    });
+        it('if record contains decimal numbers, provide this number in average', function () {
+            var meter;
+            meter = new Meter();
+            meter.record(2.2);
+            meter.record(4.4);
+            meter.getAverage().should.closeToEqual(3.3);
+        });
 
-    it('record() on invalid values will increment count and count as 0 in average', function () {
-        var meter;
-        meter = new Meter();
-        meter.record('a');
-        meter.record(null);
-        meter.record({k: 'v'});
-        meter.getCount().should.equal(3);
-        meter.getAverage().should.equal(0);
-    });
+        it('record() on invalid values will increment count and count as 0 in average', function () {
+            var meter;
+            meter = new Meter();
+            meter.record('a');
+            meter.record(null);
+            meter.record({k: 'v'});
+            meter.getCount().should.equal(3);
+            meter.getAverage().should.equal(0);
+        });
 
-    it('given record using stopwatch, average should still return averages', function (done) {
-        var meter = new Meter();
-        var sw1 = new StopWatch();
-        sw1.start();
-        setTimeout(function () {
-            sw1.stop();
-            meter.record(sw1);
-        }, 200);
+        it('given record using stopwatch, average should still return averages', function (done) {
+            var meter = new Meter();
+            var sw1 = new StopWatch();
+            sw1.start();
+            setTimeout(function () {
+                sw1.stop();
+                meter.record(sw1);
+            }, 200);
 
-        var sw2 = new StopWatch();
-        sw2.start();
-        setTimeout(function () {
-            sw2.stop();
-            meter.record(sw2);
-        }, 400);
+            var sw2 = new StopWatch();
+            sw2.start();
+            setTimeout(function () {
+                sw2.stop();
+                meter.record(sw2);
+            }, 400);
 
-        setTimeout(function () {
-            meter.getCount().should.equal(2);
-            meter.getAverage().should.within(300, 320); //allow for some timing to be off, setTimeout not exact science
-            done();
-        }, 500);
+            setTimeout(function () {
+                meter.getCount().should.equal(2);
+                meter.getAverage().should.within(300, 320); //allow for some timing to be off, setTimeout not exact science
+                done();
+            }, 500);
+        });
     });
 
     it('meter.start() provides and event, which can be used to auto record meter', function (done) {
