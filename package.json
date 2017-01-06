@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/jasonray/statman-meter#readme",
   "dependencies": {
+    "should": "^11.1.2",
     "statman-stopwatch": "^1.0.8",
     "underscore": "^1.8.3"
   },
