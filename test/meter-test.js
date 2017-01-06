@@ -15,7 +15,7 @@ describe('meter', function () {
     it('init should return an instance of meter', function () {
         var meter;
         meter = new Meter();
-        assert.ok(meter);
+        should.exist(meter);
     });
 
     it('record once and get count should return 1', function () {
