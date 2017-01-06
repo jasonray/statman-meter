@@ -86,7 +86,7 @@ describe('numeric list', function () {
 
     it('given an empty list, average should return 0', function () {
         var list = new NumericList();
-        assertCloseEnough(list.average(), 0);
+ list.average().should.be.closeToEqual(0);
     });
 
     it('given a list of one integer number, average should return the number', function () {
