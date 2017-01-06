@@ -26,6 +26,13 @@ var statman = require('statman');
 var meter = statman.Meter('meter-name');
 ```
 
+#Use it!
+**TBD**
 
+# Build it!
+- Make sure that you have `node` and `npm` installed
+- Clone source code to you local machine
+- Setup dependencies: `npm install`
+- run tests: `npm test`
 
 
