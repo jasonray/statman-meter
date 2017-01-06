@@ -12,6 +12,7 @@ describe('numeric list', function () {
         should.exist(list);
     });
 
+    describe('size', function () {
     it('given an empty list, size should return 0', function () {
         var list = new NumericList();
         list.size().should.equal(0);
@@ -31,7 +32,7 @@ describe('numeric list', function () {
         list.push(0);
         list.push(0);
         list.size().should.equal(5);
-    });
+    });});
 
     it('given an empty list, sum should return 0', function () {
         var list = new NumericList();
