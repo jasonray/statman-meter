@@ -220,7 +220,7 @@ describe('numeric list', function () {
     });
 
     describe('min', function () {
-        it.skip('given an empty list, min should return 0', function () {
+        it('given an empty list, min should return 0', function () {
             var list = new NumericList();
             list.min().should.be.equal(0);
         });
