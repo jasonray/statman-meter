@@ -220,47 +220,47 @@ describe('numeric list', function () {
     });
 
     describe('min', function () {
-        it.skip('given an empty list, max should return 0', function () {
+        it.skip('given an empty list, min should return 0', function () {
             var list = new NumericList();
-            list.max().should.be.equal(0);
+            list.min().should.be.equal(0);
         });
-        it.skip('given an single positive entry list, max should return that number', function () {
+        it.skip('given an single positive entry list, min should return that number', function () {
             var list = new NumericList();
             list.push(1);
-            list.max().should.be.equal(1);
+            list.min().should.be.equal(1);
         });
-        it.skip('given an single negative entry list, max should return that number', function () {
+        it.skip('given an single negative entry list, min should return that number', function () {
             var list = new NumericList();
             list.push(-1);
-            list.max().should.be.equal(-1);
+            list.min().should.be.equal(-1);
         });
-        it.skip('given an all positive entry list with biggest at end, max should return the max', function () {
+        it.skip('given an all positive entry list with smallest at end, min should return the min', function () {
             var list = new NumericList();
             list.push(1);
             list.push(2);
             list.push(3);
-            list.max().should.be.equal(3);
+            list.min().should.be.equal(3);
         });
-        it.skip('given an all positive entry list with biggest at beginning, max should return the max', function () {
+        it.skip('given an all positive entry list with smallest at beginning, min should return the min', function () {
             var list = new NumericList();
-            list.push(31);
-            list.push(22);
             list.push(13);
+            list.push(22);
+            list.push(31);
             list.max().should.be.equal(31);
         });
-        it.skip('given an all negative entry list, max should return the max', function () {
+        it.skip('given an all negative entry list, min should return the min', function () {
             var list = new NumericList();
             list.push(-31);
             list.push(-22);
             list.push(-13);
-            list.max().should.be.equal(-13);
+            list.min().should.be.equal(-13);
         });
-        it.skip('given an entry list with two same big numbers, max should return the max', function () {
+        it.skip('given an entry list with two same small numbers, min should return the min', function () {
             var list = new NumericList();
-            list.push(2);
+            list.push(1);
             list.push(1);
             list.push(2);
-            list.max().should.be.equal(2);
+            list.min().should.be.equal(1);
         });
     });
 
