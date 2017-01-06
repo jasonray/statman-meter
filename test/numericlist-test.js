@@ -13,26 +13,27 @@ describe('numeric list', function () {
     });
 
     describe('size', function () {
-    it('given an empty list, size should return 0', function () {
-        var list = new NumericList();
-        list.size().should.equal(0);
-    });
+        it('given an empty list, size should return 0', function () {
+            var list = new NumericList();
+            list.size().should.equal(0);
+        });
 
-    it('given a list of one, size should return 1', function () {
-        var list = new NumericList();
-        list.push(0);
-        list.size().should.equal(1);
-    });
+        it('given a list of one, size should return 1', function () {
+            var list = new NumericList();
+            list.push(0);
+            list.size().should.equal(1);
+        });
 
-    it('given a list of five, size should return 5', function () {
-        var list = new NumericList();
-        list.push(0);
-        list.push(0);
-        list.push(0);
-        list.push(0);
-        list.push(0);
-        list.size().should.equal(5);
-    });});
+        it('given a list of five, size should return 5', function () {
+            var list = new NumericList();
+            list.push(0);
+            list.push(0);
+            list.push(0);
+            list.push(0);
+            list.push(0);
+            list.size().should.equal(5);
+        });
+    });
 
     it('given an empty list, sum should return 0', function () {
         var list = new NumericList();
