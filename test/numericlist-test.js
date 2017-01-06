@@ -81,7 +81,7 @@ describe('numeric list', function () {
         list.push(3.3);
         list.push(4.4);
         list.push(5.5);
-        assertCloseEnough(list.sum(), 16.5);
+        list.sum().should.closeToEqual(16.5);
     });
 
     it('given an empty list, average should return 0', function () {
@@ -162,7 +162,6 @@ describe('numeric list', function () {
 
     should.Assertion.add('closeToEqual',
         function (expected) {
-            this.params = {operator: 'to be close to equal'};
             var actual = this.obj;
             actual.toFixed(2).should.equal(expected.toFixed(2));
         });
