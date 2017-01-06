@@ -45,7 +45,7 @@ describe('meter', function () {
         meter = new Meter();
         meter.record(2);
         meter.record(4);
-        assert.equal(meter.getAverage(), 3);
+        meter.getAverage().should.equal(3);
     });
 
     it.skip('if record contains decimal numbers, provide this number in average', function () {
