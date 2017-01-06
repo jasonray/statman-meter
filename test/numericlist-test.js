@@ -224,7 +224,7 @@ describe('numeric list', function () {
             var list = new NumericList();
             list.min().should.be.equal(0);
         });
-        it.skip('given an single positive entry list, min should return that number', function () {
+        it('given an single positive entry list, min should return that number', function () {
             var list = new NumericList();
             list.push(1);
             list.min().should.be.equal(1);
