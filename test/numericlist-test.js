@@ -241,7 +241,7 @@ describe('numeric list', function () {
             list.push(-1);
             list.min().should.be.equal(-1);
         });
-        it('given an all positive entry list with smallest at end, min should return the min', function () {
+        it.only('given an all positive entry list with smallest at end, min should return the min', function () {
             var list = new NumericList();
             list.push(3);
             list.push(2);
