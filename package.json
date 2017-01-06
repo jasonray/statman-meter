@@ -1,6 +1,6 @@
 {
   "name": "statman-meter",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "statman-meter is one of the metrics from the statman library. Loosely based upon codehale metric package, a meter provides count and average information over a period of time",
   "main": "lib/Meter.js",
   "scripts": {
@@ -23,6 +23,7 @@
   "dependencies": {
     "should": "^11.1.2",
     "statman-stopwatch": "^1.0.8",
+    "string-template": "^1.0.0",
     "underscore": "^1.8.3"
   },
   "devDependencies": {
