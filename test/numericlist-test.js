@@ -124,7 +124,6 @@ describe('numeric list', function () {
     });
     });
 
-
     it('given a list of two decimal numbers, sum should return the average of the numbers', function () {
         var list = new NumericList();
         list.push(2.2);
