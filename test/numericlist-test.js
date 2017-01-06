@@ -17,6 +17,10 @@ describe('numeric list', function () {
             var list = new NumericList();
             list.push(1);
         });
+        it('can add single negative number without error', function () {
+            var list = new NumericList();
+            list.push(-1);
+        });
     });
 
 
