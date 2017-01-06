@@ -156,6 +156,20 @@ describe('numeric list', function () {
             list.push(-1);
             list.max().should.be.equal(-1);
         });
+        it('given an all positive entry list with biggest at end, max should return the max', function () {
+            var list = new NumericList();
+            list.push(1);
+            list.push(2);
+            list.push(3);
+            list.max().should.be.equal(3);
+        });
+        it('given an all positive entry list with biggest at beginning, max should return the max', function () {
+            var list = new NumericList();
+            list.push(31);
+            list.push(22);
+            list.push(13);
+            list.max().should.be.equal(31);
+        });
     });
 
 
