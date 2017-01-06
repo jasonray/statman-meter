@@ -30,7 +30,7 @@ describe('meter', function () {
         meter = new Meter();
         meter.record();
         meter.record();
-        assert.equal(meter.getCount(), 2);
+        meter.getCount().should.equal(2);
     });
 
     it('if record contains a number, provide this number in average', function () {
