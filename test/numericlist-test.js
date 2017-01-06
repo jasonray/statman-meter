@@ -12,6 +12,14 @@ describe('numeric list', function () {
         should.exist(list);
     });
 
+    describe('push', function () {
+        it('can add single positive number without error', function () {
+            var list = new NumericList();
+            list.push(1);
+        });
+    });
+
+
     describe('size', function () {
         it('given an empty list, size should return 0', function () {
             var list = new NumericList();
