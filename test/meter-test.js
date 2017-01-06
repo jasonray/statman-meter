@@ -48,12 +48,12 @@ describe('meter', function () {
         meter.getAverage().should.equal(3);
     });
 
-    it.skip('if record contains decimal numbers, provide this number in average', function () {
+    it('if record contains decimal numbers, provide this number in average', function () {
         var meter;
         meter = new Meter();
         meter.record(2.2);
         meter.record(4.4);
-        TestHelper.assertCloseEnough(meter.getAverage(), 3.3);
+        meter.getAverage().should.closeToEqual(3.3);
     });
 
     it.skip('given record using stopwatch, average should still return averages', function (done) {
