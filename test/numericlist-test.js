@@ -122,7 +122,7 @@ describe('numeric list', function () {
         var list = new NumericList();
         list.push(2.2);
         list.push(4.4);
-        assertCloseEnough(list.average(), 3.3)
+        list.average().should.be.closeToEqual(3.3);
     });
 
     it('given a list of five decimal numbers, sum should return the average of the numbers', function () {
