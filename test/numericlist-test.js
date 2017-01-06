@@ -35,6 +35,7 @@ describe('numeric list', function () {
         });
     });
 
+    describe('sum', function () {
     it('given an empty list, sum should return 0', function () {
         var list = new NumericList();
         list.sum().should.equal(0);
@@ -84,6 +85,7 @@ describe('numeric list', function () {
         list.push(4.4);
         list.push(5.5);
         list.sum().should.closeToEqual(16.5);
+    });
     });
 
     it('given an empty list, average should return 0', function () {
