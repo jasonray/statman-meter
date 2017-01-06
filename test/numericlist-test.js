@@ -109,7 +109,7 @@ describe('numeric list', function () {
         list.push(3);
         list.push(4);
         list.push(5);
-        assertCloseEnough(list.average(), 3);
+        list.average().should.be.closeToEqual(3);
     });
 
     it('given a list of one decimal number, average should return the number', function () {
