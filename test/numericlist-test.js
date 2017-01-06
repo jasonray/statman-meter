@@ -4,11 +4,12 @@
 var NumericList = require('../lib/NumericList');
 var mocha = require('mocha');
 var assert = require('assert');
+var should=require('should');
 
 describe('numeric list', function () {
     it('init', function () {
         var list = new NumericList();
-        assert.ok(list);
+        should.exist(list);
     });
 
     it('given an empty list, size should return 0', function () {
