@@ -170,6 +170,13 @@ describe('numeric list', function () {
             list.push(13);
             list.max().should.be.equal(31);
         });
+        it('given an all negative entry list, max should return the max', function () {
+            var list = new NumericList();
+            list.push(-31);
+            list.push(-22);
+            list.push(-13);
+            list.max().should.be.equal(-13);
+        });
     });
 
 
