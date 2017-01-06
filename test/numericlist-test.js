@@ -64,7 +64,7 @@ describe('numeric list', function () {
     it('given a list of one decimal number, sum should return the number', function () {
         var list = new NumericList();
         list.push(5.5);
-        assertCloseEnough(list.sum(), 5.5);
+        list.sum().should.equal(5.5);
     });
 
     it('given a list of two decimal numbers, sum should return the sum of the numbers', function () {
