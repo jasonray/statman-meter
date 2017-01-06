@@ -56,6 +56,16 @@ describe('meter', function () {
         meter.getAverage().should.closeToEqual(3.3);
     });
 
+    it('record() on invalid values will increment count and count as 0 in average', function () {
+        var meter;
+        meter = new Meter();
+        meter.record('a');
+        meter.record(null);
+        meter.record({k:'v'});
+        meter.getCount().should.equal(3);
+        meter.getAverage().should.equal(0);
+    });
+
     it('given record using stopwatch, average should still return averages', function (done) {
         var meter = new Meter();
         var sw1 = new StopWatch();
