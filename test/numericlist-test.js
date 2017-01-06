@@ -48,7 +48,7 @@ describe('numeric list', function () {
         var list = new NumericList();
         list.push(2);
         list.push(4);
-        assertCloseEnough(list.sum(), 6);
+        list.sum().should.equal(6);
     });
 
     it('given a list of five integer numbers, sum should return the sum of the numbers', function () {
