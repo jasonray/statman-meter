@@ -22,7 +22,7 @@ describe('meter', function () {
         var meter;
         meter = new Meter();
         meter.record();
-        assert.equal(meter.getCount(), 1);
+        meter.getCount().should.equal(1);
     });
 
     it('record twice and get count should return 2', function () {
