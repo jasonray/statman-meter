@@ -89,39 +89,39 @@ describe('numeric list', function () {
     });
 
     describe('average', function () {
-    it('given an empty list, average should return 0', function () {
-        var list = new NumericList();
-        list.average().should.be.closeToEqual(0);
-    });
+        it('given an empty list, average should return 0', function () {
+            var list = new NumericList();
+            list.average().should.be.closeToEqual(0);
+        });
 
-    it('given a list of one integer number, average should return the number', function () {
-        var list = new NumericList();
-        list.push(5);
-        list.average().should.be.closeToEqual(5);
-    });
+        it('given a list of one integer number, average should return the number', function () {
+            var list = new NumericList();
+            list.push(5);
+            list.average().should.be.closeToEqual(5);
+        });
 
-    it('given a list of two integer numbers, sum should return the average of the numbers', function () {
-        var list = new NumericList();
-        list.push(4);
-        list.push(6);
-        list.average().should.be.closeToEqual(5);
-    });
+        it('given a list of two integer numbers, sum should return the average of the numbers', function () {
+            var list = new NumericList();
+            list.push(4);
+            list.push(6);
+            list.average().should.be.closeToEqual(5);
+        });
 
-    it('given a list of five integer numbers, sum should return the average of the numbers', function () {
-        var list = new NumericList();
-        list.push(1);
-        list.push(2);
-        list.push(3);
-        list.push(4);
-        list.push(5);
-        list.average().should.be.closeToEqual(3);
-    });
+        it('given a list of five integer numbers, sum should return the average of the numbers', function () {
+            var list = new NumericList();
+            list.push(1);
+            list.push(2);
+            list.push(3);
+            list.push(4);
+            list.push(5);
+            list.average().should.be.closeToEqual(3);
+        });
 
-    it('given a list of one decimal number, average should return the number', function () {
-        var list = new NumericList();
-        list.push(3.3);
-        list.average().should.be.closeToEqual(3.3);
-    });
+        it('given a list of one decimal number, average should return the number', function () {
+            var list = new NumericList();
+            list.push(3.3);
+            list.average().should.be.closeToEqual(3.3);
+        });
     });
 
     it('given a list of two decimal numbers, sum should return the average of the numbers', function () {
