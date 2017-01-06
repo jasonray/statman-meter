@@ -18,19 +18,21 @@ describe('meter', function () {
         should.exist(meter);
     });
 
-    it('record once and get count should return 1', function () {
-        var meter;
-        meter = new Meter();
-        meter.record();
-        meter.getCount().should.equal(1);
-    });
+    describe('count', function () {
+        it('record once and get count should return 1', function () {
+            var meter;
+            meter = new Meter();
+            meter.record();
+            meter.getCount().should.equal(1);
+        });
 
-    it('record twice and get count should return 2', function () {
-        var meter;
-        meter = new Meter();
-        meter.record();
-        meter.record();
-        meter.getCount().should.equal(2);
+        it('record twice and get count should return 2', function () {
+            var meter;
+            meter = new Meter();
+            meter.record();
+            meter.record();
+            meter.getCount().should.equal(2);
+        });
     });
 
     it('if record contains a number, provide this number in average', function () {
