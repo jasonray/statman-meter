@@ -115,7 +115,7 @@ describe('numeric list', function () {
     it('given a list of one decimal number, average should return the number', function () {
         var list = new NumericList();
         list.push(3.3);
-        assertCloseEnough(list.average(), 3.3)
+        list.average().should.be.closeToEqual(3.3);
     });
 
     it('given a list of two decimal numbers, sum should return the average of the numbers', function () {
