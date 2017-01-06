@@ -109,19 +109,26 @@ describe('meter', function () {
             actual.toFixed(2).should.equal(expected.toFixed(2));
         });
 
-    it('toString() with name', function () {
-        var meter;
-        meter = new Meter('calls to subsystem');
-        meter.record(2.2);
-        meter.record(4.4);
-        meter.toString().should.equal('[calls to subsystem: count:2; average:3.30]');
-    });
-    it('toString() without name', function () {
-        var meter;
-        meter = new Meter();
-        meter.record(2.2);
-        meter.record(4.4);
-        meter.toString().should.equal('[count:2; average:3.30]');
+    describe('toString()', function () {
+        it('toString() with name', function () {
+            var meter;
+            meter = new Meter('calls to subsystem');
+            meter.record(2.2);
+            meter.record(4.4);
+            meter.toString().should.equal('[calls to subsystem: count:2; average:3.30]');
+        });
+        it('toString() without name', function () {
+            var meter;
+            meter = new Meter();
+            meter.record(2.2);
+            meter.record(4.4);
+            meter.toString().should.equal('[count:2; average:3.30]');
+        });
+        it('toString() on empty', function () {
+            var meter;
+            meter = new Meter();
+            meter.toString().should.equal('[count:0; average:0.00]');
+        });
     });
 
 
