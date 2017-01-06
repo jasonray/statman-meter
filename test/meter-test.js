@@ -4,10 +4,9 @@
 var Meter = require('../lib/Meter');
 var mocha = require('mocha');
 var assert = require('assert');
+var should = require('should');
 var StopWatch = require('statman-stopwatch');
 var _ = require('underscore');
-// var TestHelper = require('./testhelper');
-var should = require('should');
 
 describe('meter', function () {
     this.timeout(5000);
