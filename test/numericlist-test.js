@@ -262,6 +262,13 @@ describe('numeric list', function () {
             list.push(2);
             list.min().should.be.equal(1);
         });
+        it('w/decimal', function () {
+            var list = new NumericList();
+            list.push(1.1);
+            list.push(1.9);
+            list.push(2.0);
+            list.min().should.be.equal(1.1);
+        });
     });
 
 
