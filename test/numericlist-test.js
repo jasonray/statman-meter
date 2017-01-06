@@ -88,6 +88,7 @@ describe('numeric list', function () {
         });
     });
 
+    describe('average', function () {
     it('given an empty list, average should return 0', function () {
         var list = new NumericList();
         list.average().should.be.closeToEqual(0);
@@ -121,6 +122,8 @@ describe('numeric list', function () {
         list.push(3.3);
         list.average().should.be.closeToEqual(3.3);
     });
+    });
+
 
     it('given a list of two decimal numbers, sum should return the average of the numbers', function () {
         var list = new NumericList();
