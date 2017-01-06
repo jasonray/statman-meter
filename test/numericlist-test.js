@@ -25,6 +25,24 @@ describe('numeric list', function () {
             var list = new NumericList();
             list.push(0);
         });
+        it('can add decimal without error', function () {
+            var list = new NumericList();
+            list.push(1.1);
+        });
+        it('cannot add null', function () {
+            var list = new NumericList();
+            assert.throws(function () {
+                list.push(null);
+            }, Error, "Cannot add non-numberic values to meter");
+
+        });
+        it('cannot add string', function () {
+            var list = new NumericList();
+            assert.throws(function () {
+                list.push('a');
+            }, Error, "Cannot add non-numberic values to meter");
+
+        });
     });
 
     describe('size', function () {
