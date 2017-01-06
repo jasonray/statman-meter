@@ -141,6 +141,14 @@ describe('numeric list', function () {
         });
     });
 
+    describe('average', function () {
+        it('given an empty list, max should return 0', function () {
+            var list = new NumericList();
+            list.max().should.be.closeToEqual(0);
+        });
+    });
+
+
     it('pushing a list of 100,000 numbers and calculating sum/ave should run within milliseconds', function () {
         this.timeout(1000);
 
