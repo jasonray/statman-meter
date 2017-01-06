@@ -122,23 +122,23 @@ describe('numeric list', function () {
             list.push(3.3);
             list.average().should.be.closeToEqual(3.3);
         });
-    });
 
-    it('given a list of two decimal numbers, sum should return the average of the numbers', function () {
-        var list = new NumericList();
-        list.push(2.2);
-        list.push(4.4);
-        list.average().should.be.closeToEqual(3.3);
-    });
+        it('given a list of two decimal numbers, average should return the average of the numbers', function () {
+            var list = new NumericList();
+            list.push(2.2);
+            list.push(4.4);
+            list.average().should.be.closeToEqual(3.3);
+        });
 
-    it('given a list of five decimal numbers, sum should return the average of the numbers', function () {
-        var list = new NumericList();
-        list.push(1.1);
-        list.push(2.2);
-        list.push(3.3);
-        list.push(4.4);
-        list.push(5.5);
-        list.average().should.be.closeToEqual(3.3);
+        it('given a list of five decimal numbers, average should return the average of the numbers', function () {
+            var list = new NumericList();
+            list.push(1.1);
+            list.push(2.2);
+            list.push(3.3);
+            list.push(4.4);
+            list.push(5.5);
+            list.average().should.be.closeToEqual(3.3);
+        });
     });
 
     it('pushing a list of 100,000 numbers and calculating sum/ave should run within milliseconds', function () {
