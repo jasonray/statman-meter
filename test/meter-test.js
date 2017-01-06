@@ -1,7 +1,7 @@
 /*jslint node: true */
 "use strict";
 
-var Meter = require('../lib/metric/Meter');
+var Meter = require('../lib/Meter');
 var mocha = require('mocha');
 var assert = require('assert');
 var StopWatch = require('../lib/metric/Stopwatch');
