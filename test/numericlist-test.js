@@ -155,9 +155,9 @@ describe('numeric list', function () {
 
         var expected = getExpected(testsize);
 
-        assertCloseEnough(list.size(), expected.size, "size");
-        assertCloseEnough(list.sum(), expected.sum, "sum");
-        assertCloseEnough(list.average(), expected.average, "ave");
+        list.size().should.be.closeToEqual(expected.size);
+        list.sum().should.be.closeToEqual(expected.sum);
+        list.average().should.be.closeToEqual(expected.average);
     });
 
     should.Assertion.add('closeToEqual',
