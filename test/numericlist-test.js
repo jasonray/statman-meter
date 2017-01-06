@@ -248,12 +248,12 @@ describe('numeric list', function () {
             list.push(31);
             list.min().should.be.equal(13);
         });
-        it.skip('given an all negative entry list, min should return the min', function () {
+        it('given an all negative entry list, min should return the min', function () {
             var list = new NumericList();
             list.push(-31);
             list.push(-22);
             list.push(-13);
-            list.min().should.be.equal(-13);
+            list.min().should.be.equal(-31);
         });
         it.skip('given an entry list with two same small numbers, min should return the min', function () {
             var list = new NumericList();
