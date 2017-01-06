@@ -241,12 +241,12 @@ describe('numeric list', function () {
             list.push(1);
             list.min().should.be.equal(1);
         });
-        it.skip('given an all positive entry list with smallest at beginning, min should return the min', function () {
+        it ('given an all positive entry list with smallest at beginning, min should return the min', function () {
             var list = new NumericList();
             list.push(13);
             list.push(22);
             list.push(31);
-            list.max().should.be.equal(31);
+            list.min().should.be.equal(13);
         });
         it.skip('given an all negative entry list, min should return the min', function () {
             var list = new NumericList();
