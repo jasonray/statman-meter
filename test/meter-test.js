@@ -2,9 +2,10 @@
 "use strict";
 
 var Meter = require('../lib/Meter');
+var StopWatch = require('statman-stopwatch');
+
 var mocha = require('mocha');
 var should = require('should');
-var _ = require('underscore');
 
 describe('meter', function () {
     this.timeout(5000);
