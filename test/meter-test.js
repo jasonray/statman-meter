@@ -7,6 +7,7 @@ var assert = require('assert');
 var StopWatch = require('statman-stopwatch');
 var _ = require('underscore');
 // var TestHelper = require('./testhelper');
+var should = require('should');
 
 describe('meter', function () {
     this.timeout(5000);
@@ -77,6 +78,13 @@ describe('meter', function () {
             done();
         }, 500);
     });
+
+    should.Assertion.add('closeToEqual',
+        function (expected) {
+            var actual = this.obj;
+            actual.toFixed(2).should.equal(expected.toFixed(2));
+        });
+
 
 
 });
