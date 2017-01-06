@@ -177,6 +177,13 @@ describe('numeric list', function () {
             list.push(-13);
             list.max().should.be.equal(-13);
         });
+        it('given an entry list with two same big numbers, max should return the max', function () {
+            var list = new NumericList();
+            list.push(2);
+            list.push(1);
+            list.push(2);
+            list.max().should.be.equal(2);
+        });
     });
 
 
