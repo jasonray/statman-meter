@@ -30,7 +30,7 @@ describe('numeric list', function () {
         list.push(0);
         list.push(0);
         list.push(0);
-        assertCloseEnough(list.size(), 5);
+        list.size().should.equal(5);
     });
 
     it('given an empty list, sum should return 0', function () {
