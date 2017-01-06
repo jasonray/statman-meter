@@ -217,6 +217,13 @@ describe('numeric list', function () {
             list.push(2);
             list.max().should.be.equal(2);
         });
+        it('w/decimal', function () {
+            var list = new NumericList();
+            list.push(1.1);
+            list.push(1.9);
+            list.push(2.1);
+            list.max().should.be.equal(2.1);
+        });
     });
 
     describe('min', function () {
