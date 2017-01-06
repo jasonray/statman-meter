@@ -61,7 +61,7 @@ describe('meter', function () {
         meter = new Meter();
         meter.record('a');
         meter.record(null);
-        meter.record({k:'v'});
+        meter.record({k: 'v'});
         meter.getCount().should.equal(3);
         meter.getAverage().should.equal(0);
     });
@@ -109,6 +109,14 @@ describe('meter', function () {
             actual.toFixed(2).should.equal(expected.toFixed(2));
         });
 
+    it('toString()', function () {
+        var meter;
+        meter = new Meter();
+        meter.record(2.2);
+        meter.record(4.4);
+        console.log(meter.toString());
+
+    });
 
 
 });
