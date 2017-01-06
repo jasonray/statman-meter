@@ -4,7 +4,6 @@
 var Meter = require('../lib/Meter');
 var mocha = require('mocha');
 var should = require('should');
-var StopWatch = require('statman-stopwatch');
 var _ = require('underscore');
 
 describe('meter', function () {
