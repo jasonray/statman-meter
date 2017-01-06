@@ -21,8 +21,11 @@ describe('numeric list', function () {
             var list = new NumericList();
             list.push(-1);
         });
+        it('can add zero without error', function () {
+            var list = new NumericList();
+            list.push(0);
+        });
     });
-
 
     describe('size', function () {
         it('given an empty list, size should return 0', function () {
