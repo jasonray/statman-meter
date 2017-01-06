@@ -36,56 +36,56 @@ describe('numeric list', function () {
     });
 
     describe('sum', function () {
-    it('given an empty list, sum should return 0', function () {
-        var list = new NumericList();
-        list.sum().should.equal(0);
-    });
+        it('given an empty list, sum should return 0', function () {
+            var list = new NumericList();
+            list.sum().should.equal(0);
+        });
 
-    it('given a list of one integer number, sum should return the number', function () {
-        var list = new NumericList();
-        list.push(5);
-        list.sum().should.equal(5);
-    });
+        it('given a list of one integer number, sum should return the number', function () {
+            var list = new NumericList();
+            list.push(5);
+            list.sum().should.equal(5);
+        });
 
-    it('given a list of two integer numbers, sum should return the sum of the numbers', function () {
-        var list = new NumericList();
-        list.push(2);
-        list.push(4);
-        list.sum().should.equal(6);
-    });
+        it('given a list of two integer numbers, sum should return the sum of the numbers', function () {
+            var list = new NumericList();
+            list.push(2);
+            list.push(4);
+            list.sum().should.equal(6);
+        });
 
-    it('given a list of five integer numbers, sum should return the sum of the numbers', function () {
-        var list = new NumericList();
-        list.push(1);
-        list.push(2);
-        list.push(3);
-        list.push(4);
-        list.push(5);
-        list.sum().should.equal(15);
-    });
+        it('given a list of five integer numbers, sum should return the sum of the numbers', function () {
+            var list = new NumericList();
+            list.push(1);
+            list.push(2);
+            list.push(3);
+            list.push(4);
+            list.push(5);
+            list.sum().should.equal(15);
+        });
 
-    it('given a list of one decimal number, sum should return the number', function () {
-        var list = new NumericList();
-        list.push(5.5);
-        list.sum().should.equal(5.5);
-    });
+        it('given a list of one decimal number, sum should return the number', function () {
+            var list = new NumericList();
+            list.push(5.5);
+            list.sum().should.equal(5.5);
+        });
 
-    it('given a list of two decimal numbers, sum should return the sum of the numbers', function () {
-        var list = new NumericList();
-        list.push(2.2);
-        list.push(4.4);
-        list.sum().should.closeToEqual(6.6);
-    });
+        it('given a list of two decimal numbers, sum should return the sum of the numbers', function () {
+            var list = new NumericList();
+            list.push(2.2);
+            list.push(4.4);
+            list.sum().should.closeToEqual(6.6);
+        });
 
-    it('given a list of five decimal numbers, sum should return the sum of the numbers', function () {
-        var list = new NumericList();
-        list.push(1.1);
-        list.push(2.2);
-        list.push(3.3);
-        list.push(4.4);
-        list.push(5.5);
-        list.sum().should.closeToEqual(16.5);
-    });
+        it('given a list of five decimal numbers, sum should return the sum of the numbers', function () {
+            var list = new NumericList();
+            list.push(1.1);
+            list.push(2.2);
+            list.push(3.3);
+            list.push(4.4);
+            list.push(5.5);
+            list.sum().should.closeToEqual(16.5);
+        });
     });
 
     it('given an empty list, average should return 0', function () {
