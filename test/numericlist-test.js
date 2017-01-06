@@ -99,7 +99,7 @@ describe('numeric list', function () {
         var list = new NumericList();
         list.push(4);
         list.push(6);
-        assertCloseEnough(list.average(), 5);
+        list.average().should.be.closeToEqual(5);
     });
 
     it('given a list of five integer numbers, sum should return the average of the numbers', function () {
