@@ -255,7 +255,7 @@ describe('numeric list', function () {
             list.push(-13);
             list.min().should.be.equal(-31);
         });
-        it.skip('given an entry list with two same small numbers, min should return the min', function () {
+        it('given an entry list with two same small numbers, min should return the min', function () {
             var list = new NumericList();
             list.push(1);
             list.push(1);
