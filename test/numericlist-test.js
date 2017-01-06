@@ -1,7 +1,7 @@
 /*jslint node: true */
 "use strict";
 
-var NumericList = require('../lib/NumericList');
+var NumericList = require('../lib/numeric-list');
 var mocha = require('mocha');
 var assert = require('assert');
 var should = require('should');
@@ -311,9 +311,5 @@ describe('numeric list', function () {
             var actual = this.obj;
             actual.toFixed(2).should.equal(expected.toFixed(2));
         });
-
-    function assertCloseEnough(actual, expected) {
-        assert.equal(actual.toFixed(2), expected.toFixed(2));
-    }
 
 });
