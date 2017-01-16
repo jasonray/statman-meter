@@ -33,13 +33,16 @@ var meter = statman.Meter('meter-name');
 
 #Use it!
 ## Option 1: init, record values, read 
+```
 var meter = new Meter('webservice-calls');
 meter.record(2000); //record that a call occurred for 2000 milliseconds
 meter.record(4000); //record that a call occurred for 4000 milliseconds
 meter.count()       //reports that there have been 2 calls 
 meter.getAverage(); //reports that the average call is taking 3000 milliseconds
+```
 
 ## Option 2: init, record stopwatch, read 
+```
 var meter = new Meter('webservice-calls');
 var stopwatch = new Stopwatch();
 stopwatch.start();
@@ -48,16 +51,19 @@ stopwatch.stop();
 meter.record(stopwatch); //record that a call occurred and gets value from stopwatch.read()
 meter.count()       //reports number of calls
 meter.getAverage(); //reports the average timing of the calls
+```
 
 For more info on stopwatch, see (`statman-stopwatch`)[https://github.com/jasonray/statman-stopwatch]
 
 ## Option 3: init, start event, stop event
+```
 var meter = new Meter('webservice-calls');
 var event = meter.startEvent();
 ..
 var event = stop();
 meter.count()       //reports number of calls
 meter.getAverage(); //reports the average timing of the calls
+```
 
 # Build it!
 - Make sure that you have `node` and `npm` installed
