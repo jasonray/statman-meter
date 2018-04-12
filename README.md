@@ -1,5 +1,5 @@
 # statman-meter [![Build Status](https://travis-ci.org/jasonray/statman-meter.svg?branch=master)](https://travis-ci.org/jasonray/statman-meter) [![on npm](http://img.shields.io/npm/v/statman-meter.svg?style=flat)](https://www.npmjs.org/package/statman-meter)
-statman-meter is one of the metrics from the statman library. Loosely based upon codehale metric package, a meter provides count and average information over a period of time.
+statman-meter is one of the metrics from the statman library. Loosely based upon codahale metric package, a meter provides count and average information over a period of time.
 
 This can be used to instrument call that may be expensive:
 - incoming web service calls
@@ -37,7 +37,7 @@ var meter = statman.Meter('meter-name');
 var meter = new Meter('webservice-calls');
 meter.record(2000); //record that a call occurred for 2000 milliseconds
 meter.record(4000); //record that a call occurred for 4000 milliseconds
-meter.count()       //reports that there have been 2 calls 
+meter.count();      //reports that there have been 2 calls 
 meter.getAverage(); //reports that the average call is taking 3000 milliseconds
 ```
 
@@ -49,7 +49,7 @@ stopwatch.start();
 ..
 stopwatch.stop();
 meter.record(stopwatch); //record that a call occurred and gets value from stopwatch.read()
-meter.count()       //reports number of calls
+meter.count();      //reports number of calls
 meter.getAverage(); //reports the average timing of the calls
 ```
 
