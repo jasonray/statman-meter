@@ -31,7 +31,7 @@ var statman = require('statman');
 var meter = statman.Meter('meter-name');
 ```
 
-#Use it!
+# Use it!
 ## Option 1: init, record values, read 
 ```
 var meter = new Meter('webservice-calls');
